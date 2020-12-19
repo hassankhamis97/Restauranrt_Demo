@@ -9,7 +9,7 @@
 import Foundation
 
 struct MealHeader {
-    let image: String
+    let imageUrl: String
     let rating: Double
     let name: String
     var quantity: Int

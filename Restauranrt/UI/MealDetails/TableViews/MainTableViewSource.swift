@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class MainTableViewSource: NSObject, UITableViewDataSource {
 //extension MealDetailsViewController: UITableViewDataSource {
@@ -23,10 +24,16 @@ class MainTableViewSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if data[indexPath.row] is MealHeader {
+            guard let mealHeader = data[indexPath.row] as? MealHeader else {
+                return  UITableViewCell()
+                
+            }
+            
             tableView.register(UINib(nibName: "HeaderMealDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderMealDetailsTableViewCell")
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderMealDetailsTableViewCell", for: indexPath) as! HeaderMealDetailsTableViewCell
+            cell.mealImageView?.sd_setImage(with: URL(string: mealHeader.imageUrl), placeholderImage: UIImage(named: ""), options: SDWebImageOptions(), completed: nil)
             cell.mealNameTextView.text = (data[indexPath.row] as? MealHeader)?.name
-            mealSizesCollectionViewSource = MealSizesCollectionViewSource(data: (data[indexPath.row] as? MealHeader)!.sizes)
+            mealSizesCollectionViewSource = MealSizesCollectionViewSource(data: mealHeader.sizes)
             cell.mealSizesCollectionView.dataSource = mealSizesCollectionViewSource
             cell.mealSizesCollectionView.delegate = mealSizesCollectionViewSource
             return cell

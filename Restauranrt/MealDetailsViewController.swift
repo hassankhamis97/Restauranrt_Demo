@@ -23,7 +23,7 @@ class MealDetailsViewController: UIViewController  {
         sizes.append(Size(id: "2", name: "Medium", checked: false, BD: "4.500BD"))
         sizes.append(Size(id: "3", name: "Normal", checked: false, BD: "4.500BD"))
         sizes.append(Size(id: "4", name: "Small", checked: false, BD: "4.500BD"))
-        let mealHeader = MealHeader(image: "", rating: 3.5, name: "Pasta", quantity: 1, sizes: sizes )
+        let mealHeader = MealHeader(imageUrl: "https://www.vhv.rs/dpng/d/15-150323_transparent-seafood-pasta-png-png-download.png", rating: 3.5, name: "Pasta", quantity: 1, sizes: sizes )
         
         
         data.append(mealHeader)

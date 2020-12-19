@@ -16,19 +16,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9c-K7-Gwh">
-                        <rect key="frame" x="37.5" y="0.0" width="42" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="37.5" y="10" width="42.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7B-Im-dMJ">
-                        <rect key="frame" x="37.5" y="30.5" width="42" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="43" y="39.5" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nsr-uE-47B">
-                        <rect key="frame" x="46" y="66" width="25" height="25"/>
+                        <rect key="frame" x="46" y="69" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="Wb3-mr-Brm"/>
                             <constraint firstAttribute="height" constant="25" id="pZu-OT-Zdp"/>
@@ -36,10 +36,11 @@
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Nsr-uE-47B" firstAttribute="top" secondItem="p7B-Im-dMJ" secondAttribute="bottom" constant="15" id="7eO-Nb-gz7"/>
                 <constraint firstItem="p7B-Im-dMJ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Bow-h9-THw"/>
-                <constraint firstItem="p9c-K7-Gwh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Gcd-pA-bTL"/>
+                <constraint firstItem="p9c-K7-Gwh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Gcd-pA-bTL"/>
                 <constraint firstItem="Nsr-uE-47B" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="R7B-cr-Fx3"/>
                 <constraint firstItem="p9c-K7-Gwh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="kqg-n4-2hg"/>
                 <constraint firstItem="p7B-Im-dMJ" firstAttribute="top" secondItem="p9c-K7-Gwh" secondAttribute="bottom" constant="10" id="yll-1k-aWe"/>
