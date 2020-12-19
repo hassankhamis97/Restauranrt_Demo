@@ -20,19 +20,43 @@ class MealSizesCollectionViewSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let size = data[indexPath.row]
+        
         collectionView.register(UINib(nibName: "SizeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SizeCollectionViewCell")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SizeCollectionViewCell", for: indexPath) as! SizeCollectionViewCell
-        cell.nameTextView.text = data[indexPath.row].name
-        cell.sizeBDTextView.text = data[indexPath.row].BD
-        cell.checkSizeImageView.image = UIImage(named: "plusSquare")
+        cell.nameTextView.text = size.name
+        cell.sizeBDTextView.text = size.BD
+        if size.checked {
+            cell.checkSizeImageView.image = UIImage(named: "check")
+        } else {
+            cell.checkSizeImageView.image = UIImage(named: "plusSquare")
+        }
         return cell
+    }
+    
+    func updateAllCheckedItems(checkIndex: Int) {
+        for index in 0..<data.count {
+            if index == checkIndex {
+                data[index].checked = true
+            } else {
+                data[index].checked = false
+            }
+        }
     }
     
     
 }
 
 extension MealSizesCollectionViewSource: UICollectionViewDelegate {
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let size = data[indexPath.row]
+        if size.checked == false {
+            updateAllCheckedItems(checkIndex: indexPath.row)
+            collectionView.reloadData()
+        } else {
+            return
+        }
+    }
     
 }
 
@@ -55,3 +79,4 @@ extension MealSizesCollectionViewSource: UICollectionViewDelegateFlowLayout {
         return sectionInset
     }
 }
+

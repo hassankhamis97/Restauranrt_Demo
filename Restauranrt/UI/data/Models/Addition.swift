@@ -8,8 +8,18 @@
 
 import Foundation
 
-struct Addition {
+class Addition {
     let id: String
     let name: String
     var checked: Bool
+    
+    init(
+        id: String,
+        name: String,
+        checked: Bool
+    ) {
+        self.id = id
+        self.name = name
+        self.checked = checked
+    }
 }

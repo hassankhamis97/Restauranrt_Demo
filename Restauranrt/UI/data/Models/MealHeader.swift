@@ -8,10 +8,25 @@
 
 import Foundation
 
-struct MealHeader {
+class MealHeader {
     let imageUrl: String
     let rating: Double
     let name: String
     var quantity: Int
     var sizes: [Size]
+    var updateLabel : ((String) -> Void)?
+    
+    init(
+        imageUrl: String,
+        rating: Double,
+        name: String,
+        quantity: Int,
+    sizes: [Size]
+    ) {
+        self.imageUrl = imageUrl
+        self.rating = rating
+        self.name = name
+        self.quantity = quantity
+        self.sizes = sizes
+    }
 }

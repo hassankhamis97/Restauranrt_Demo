@@ -8,9 +8,16 @@
 
 import Foundation
 
-struct Size {
+class Size {
     let id: String
     let name: String
     var checked: Bool
     let BD: String
+    
+    init(id: String, name: String, checked: Bool, BD: String) {
+        self.id = id
+        self.name = name
+        self.checked = checked
+        self.BD = BD
+    }
 }

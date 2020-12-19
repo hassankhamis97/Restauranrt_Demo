@@ -12,6 +12,9 @@ class HeaderMealDetailsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var mealNameTextView: UILabel!
+    @IBOutlet weak var quantityTextView: UILabel!
+    @IBOutlet weak var minusBtn: UIButton!
+    @IBOutlet weak var plusBtn: UIButton!
     
     
     @IBOutlet weak var mealSizesCollectionView: UICollectionView!
@@ -26,5 +29,6 @@ class HeaderMealDetailsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
     
 }

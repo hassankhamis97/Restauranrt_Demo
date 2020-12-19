@@ -15,7 +15,10 @@ class SizeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var checkSizeImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        checkSizeImageView.layer.cornerRadius = checkSizeImageView.frame.width / 2
         // Initialization code
     }
+    
+    
 
 }

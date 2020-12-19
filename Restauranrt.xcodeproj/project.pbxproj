@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,12 @@
 		4E22C6AE258D51D900D19FB2 /* HeaderMealDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E22C6AC258D51D900D19FB2 /* HeaderMealDetailsTableViewCell.xib */; };
 		4E22C6B3258D544000D19FB2 /* SizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E22C6B1258D544000D19FB2 /* SizeCollectionViewCell.swift */; };
 		4E22C6B4258D544000D19FB2 /* SizeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E22C6B2258D544000D19FB2 /* SizeCollectionViewCell.xib */; };
+		4E290CC4258E9CB200CF3295 /* CollapsedTableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E290CC3258E9CB200CF3295 /* CollapsedTableViewSource.swift */; };
+		4E290CC6258E9F7E00CF3295 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E290CC5258E9F7E00CF3295 /* SectionModel.swift */; };
+		4E2DF2E7258E91930032346E /* CollapsedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DF2E5258E91930032346E /* CollapsedTableViewCell.swift */; };
+		4E2DF2E8258E91930032346E /* CollapsedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2DF2E6258E91930032346E /* CollapsedTableViewCell.xib */; };
+		4E2DF2EB258E98750032346E /* CheckBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DF2E9258E98750032346E /* CheckBoxTableViewCell.swift */; };
+		4E2DF2EC258E98750032346E /* CheckBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2DF2EA258E98750032346E /* CheckBoxTableViewCell.xib */; };
 		4ED4B5A7258D7D77003FC128 /* MealSizesCollectionViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED4B5A6258D7D77003FC128 /* MealSizesCollectionViewSource.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +79,12 @@
 		4E22C6AC258D51D900D19FB2 /* HeaderMealDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderMealDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		4E22C6B1258D544000D19FB2 /* SizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E22C6B2258D544000D19FB2 /* SizeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SizeCollectionViewCell.xib; sourceTree = "<group>"; };
+		4E290CC3258E9CB200CF3295 /* CollapsedTableViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsedTableViewSource.swift; sourceTree = "<group>"; };
+		4E290CC5258E9F7E00CF3295 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		4E2DF2E5258E91930032346E /* CollapsedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsedTableViewCell.swift; sourceTree = "<group>"; };
+		4E2DF2E6258E91930032346E /* CollapsedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsedTableViewCell.xib; sourceTree = "<group>"; };
+		4E2DF2E9258E98750032346E /* CheckBoxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTableViewCell.swift; sourceTree = "<group>"; };
+		4E2DF2EA258E98750032346E /* CheckBoxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxTableViewCell.xib; sourceTree = "<group>"; };
 		4ED4B5A6258D7D77003FC128 /* MealSizesCollectionViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSizesCollectionViewSource.swift; sourceTree = "<group>"; };
 		58865A67F3471AE8CB080475 /* Pods_Restauranrt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restauranrt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -182,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				4E22C69E258D4C1900D19FB2 /* MainTableViewSource.swift */,
+				4E290CC3258E9CB200CF3295 /* CollapsedTableViewSource.swift */,
 			);
 			path = TableViews;
 			sourceTree = "<group>";
@@ -201,6 +214,7 @@
 				4E22C6A4258D4F5400D19FB2 /* MealDetailModel.swift */,
 				4E22C6A6258D4FC200D19FB2 /* Size.swift */,
 				4E22C6A8258D507400D19FB2 /* MealHeader.swift */,
+				4E290CC5258E9F7E00CF3295 /* SectionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +222,8 @@
 		4E22C6AA258D519300D19FB2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4E2DF2ED258E987E0032346E /* CheckBoxCell */,
+				4E2DF2E2258E913A0032346E /* CollapsedCell */,
 				4E22C6B0258D541500D19FB2 /* SizeCollectionViewCell */,
 				4E22C6AF258D53A700D19FB2 /* HeaderMealDetails */,
 			);
@@ -232,6 +248,24 @@
 			path = SizeCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		4E2DF2E2258E913A0032346E /* CollapsedCell */ = {
+			isa = PBXGroup;
+			children = (
+				4E2DF2E5258E91930032346E /* CollapsedTableViewCell.swift */,
+				4E2DF2E6258E91930032346E /* CollapsedTableViewCell.xib */,
+			);
+			path = CollapsedCell;
+			sourceTree = "<group>";
+		};
+		4E2DF2ED258E987E0032346E /* CheckBoxCell */ = {
+			isa = PBXGroup;
+			children = (
+				4E2DF2E9258E98750032346E /* CheckBoxTableViewCell.swift */,
+				4E2DF2EA258E98750032346E /* CheckBoxTableViewCell.xib */,
+			);
+			path = CheckBoxCell;
+			sourceTree = "<group>";
+		};
 		4ED4B5A5258D7D5C003FC128 /* CollectionViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,7 +280,6 @@
 				22665B2F784D626ED9024F9B /* Pods-Restauranrt.debug.xcconfig */,
 				0197C616A6A7B1BA5D8B9796 /* Pods-Restauranrt.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -365,10 +398,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E22C6AE258D51D900D19FB2 /* HeaderMealDetailsTableViewCell.xib in Resources */,
+				4E2DF2EC258E98750032346E /* CheckBoxTableViewCell.xib in Resources */,
 				4E1BFB68258C5DD900FED6F4 /* LaunchScreen.storyboard in Resources */,
 				4E1BFB65258C5DD900FED6F4 /* Assets.xcassets in Resources */,
 				4E1BFB63258C5DD800FED6F4 /* Main.storyboard in Resources */,
 				4E22C6B4258D544000D19FB2 /* SizeCollectionViewCell.xib in Resources */,
+				4E2DF2E8258E91930032346E /* CollapsedTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +472,7 @@
 			files = (
 				4E22C6A9258D507400D19FB2 /* MealHeader.swift in Sources */,
 				4E22C69F258D4C1900D19FB2 /* MainTableViewSource.swift in Sources */,
+				4E290CC6258E9F7E00CF3295 /* SectionModel.swift in Sources */,
 				4E22C6A5258D4F5400D19FB2 /* MealDetailModel.swift in Sources */,
 				4E22C6A3258D4E9900D19FB2 /* Addition.swift in Sources */,
 				4E1BFB60258C5DD800FED6F4 /* ViewController.swift in Sources */,
@@ -447,6 +483,9 @@
 				4E22C6AD258D51D900D19FB2 /* HeaderMealDetailsTableViewCell.swift in Sources */,
 				4E1BFB5E258C5DD800FED6F4 /* SceneDelegate.swift in Sources */,
 				4E22C6B3258D544000D19FB2 /* SizeCollectionViewCell.swift in Sources */,
+				4E2DF2EB258E98750032346E /* CheckBoxTableViewCell.swift in Sources */,
+				4E290CC4258E9CB200CF3295 /* CollapsedTableViewSource.swift in Sources */,
+				4E2DF2E7258E91930032346E /* CollapsedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
