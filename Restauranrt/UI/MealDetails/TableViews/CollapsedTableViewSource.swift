@@ -34,5 +34,7 @@ class CollapsedTableViewSource: NSObject, UITableViewDataSource {
 }
 
 extension CollapsedTableViewSource: UITableViewDelegate {
-    
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 100
+//    }
 }

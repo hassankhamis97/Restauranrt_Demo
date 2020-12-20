@@ -30,8 +30,15 @@ class MealDetailsViewController: UIViewController  {
         additions.append(Addition(id: "2", name: "Cheese", checked: false))
         
         let sectionModel = SectionModel(name: "Additions", additions: additions)
+        
+        var additions2 = [Addition]()
+        additions2.append(Addition(id: "1", name: "Tomato", checked: false))
+        additions2.append(Addition(id: "2", name: "Cheese", checked: false))
+        additions2.append(Addition(id: "3", name: "ay 7aga", checked: false))
+        let sectionModel2 = SectionModel(name: "Without", additions: additions2)
         data.append(mealHeader)
         data.append(sectionModel)
+        data.append(sectionModel2)
         
         mainTableViewSource = MainTableViewSource(data: data)
         // Do any additional setup after loading the view.

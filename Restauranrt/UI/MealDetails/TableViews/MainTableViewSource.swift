@@ -14,7 +14,7 @@ class MainTableViewSource: NSObject, UITableViewDataSource {
 //extension MealDetailsViewController: UITableViewDataSource {
     var data = [Any]()
     var mealSizesCollectionViewSource: MealSizesCollectionViewSource?
-    var collapsedTableViewSource: CollapsedTableViewSource?
+    var collapsedTableViewSource = [CollapsedTableViewSource]()
     
     
     init(data: [Any]) {
@@ -48,12 +48,12 @@ class MainTableViewSource: NSObject, UITableViewDataSource {
             return cell
         } else if data[indexPath.row] is SectionModel {
             let sectionModel = data[indexPath.row] as! SectionModel
-            collapsedTableViewSource = CollapsedTableViewSource(data: sectionModel.additions)
+            collapsedTableViewSource.append(CollapsedTableViewSource(data: sectionModel.additions))
             tableView.register(UINib(nibName: "CollapsedTableViewCell", bundle: nil), forCellReuseIdentifier: "CollapsedTableViewCell")
             let cell = tableView.dequeueReusableCell(withIdentifier: "CollapsedTableViewCell", for: indexPath) as! CollapsedTableViewCell
-            cell.collapsedTableView.delegate = collapsedTableViewSource
-            cell.collapsedTableView.dataSource = collapsedTableViewSource
-            cell.collapsedTableView.rowHeight = UITableView.automaticDimension
+            cell.collapsedTableView.delegate = collapsedTableViewSource[indexPath.row - 1]
+            cell.collapsedTableView.dataSource = collapsedTableViewSource[indexPath.row - 1]
+            
             return cell
         }
         return UITableViewCell()
@@ -83,4 +83,27 @@ class MainTableViewSource: NSObject, UITableViewDataSource {
 
 extension MainTableViewSource: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let sectionModel = data[indexPath.row] as?  SectionModel else {
+            return
+        }
+        if sectionModel.collapsed {
+            sectionModel.collapsed = false
+            tableView.reloadRows(at: [indexPath], with: .bottom)
+        } else {
+            sectionModel.collapsed = true
+            tableView.reloadRows(at: [indexPath], with: .top)
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let sectionModel = data[indexPath.row] as?  SectionModel else {
+            return UITableView.automaticDimension
+        }
+        if !sectionModel.collapsed {
+            return CGFloat(100 + sectionModel.additions.count * 28)
+        }
+        return UITableView.automaticDimension
+    }
 }

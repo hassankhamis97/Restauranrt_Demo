@@ -11,6 +11,7 @@ import Foundation
 class SectionModel {
     let name: String
     let additions: [Addition]
+    var collapsed = true
     
     init(
         name: String,
