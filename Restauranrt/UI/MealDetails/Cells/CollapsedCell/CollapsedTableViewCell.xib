@@ -21,7 +21,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq8-bN-4J8">
                                 <rect key="frame" x="0.0" y="0.0" width="455" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -33,9 +33,9 @@
                             <constraint firstItem="Pxz-k5-niU" firstAttribute="centerY" secondItem="eM4-QT-XMd" secondAttribute="centerY" id="vW1-GX-oLs"/>
                         </constraints>
                     </stackView>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iBW-aa-LYA">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iBW-aa-LYA">
                         <rect key="frame" x="0.0" y="45.5" width="531" height="377.5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tableView>
                 </subviews>
                 <constraints>
@@ -48,11 +48,12 @@
                     <constraint firstAttribute="bottom" secondItem="iBW-aa-LYA" secondAttribute="bottom" id="tWO-U1-7Bx"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="arrowImageView" destination="Pxz-k5-niU" id="AQ7-Se-4Cx"/>
                 <outlet property="collapsedTableView" destination="iBW-aa-LYA" id="hXP-fc-wt0"/>
+                <outlet property="sectionNameTextView" destination="Sq8-bN-4J8" id="lB1-ko-cRC"/>
             </connections>
             <point key="canvasLocation" x="239.85507246376812" y="237.38839285714283"/>
         </tableViewCell>

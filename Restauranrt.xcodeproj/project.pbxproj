@@ -32,6 +32,7 @@
 		4E2DF2E8258E91930032346E /* CollapsedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2DF2E6258E91930032346E /* CollapsedTableViewCell.xib */; };
 		4E2DF2EB258E98750032346E /* CheckBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DF2E9258E98750032346E /* CheckBoxTableViewCell.swift */; };
 		4E2DF2EC258E98750032346E /* CheckBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2DF2EA258E98750032346E /* CheckBoxTableViewCell.xib */; };
+		4EC0681B258FEBF70054B95D /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0681A258FEBF70054B95D /* CustomButtonView.swift */; };
 		4ED4B5A7258D7D77003FC128 /* MealSizesCollectionViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED4B5A6258D7D77003FC128 /* MealSizesCollectionViewSource.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		4E2DF2E6258E91930032346E /* CollapsedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollapsedTableViewCell.xib; sourceTree = "<group>"; };
 		4E2DF2E9258E98750032346E /* CheckBoxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxTableViewCell.swift; sourceTree = "<group>"; };
 		4E2DF2EA258E98750032346E /* CheckBoxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxTableViewCell.xib; sourceTree = "<group>"; };
+		4EC0681A258FEBF70054B95D /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		4ED4B5A6258D7D77003FC128 /* MealSizesCollectionViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSizesCollectionViewSource.swift; sourceTree = "<group>"; };
 		58865A67F3471AE8CB080475 /* Pods_Restauranrt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restauranrt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,6 +142,8 @@
 		4E1BFB5A258C5DD800FED6F4 /* Restauranrt */ = {
 			isa = PBXGroup;
 			children = (
+				4EC06819258FEAC00054B95D /* Components */,
+				4E22C6A0258D4E1E00D19FB2 /* data */,
 				4E22C69B258D4B7800D19FB2 /* UI */,
 				4E1BFB5B258C5DD800FED6F4 /* AppDelegate.swift */,
 				4E1BFB5D258C5DD800FED6F4 /* SceneDelegate.swift */,
@@ -174,7 +178,6 @@
 		4E22C69B258D4B7800D19FB2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4E22C6A0258D4E1E00D19FB2 /* data */,
 				4E22C69C258D4B8500D19FB2 /* MealDetails */,
 			);
 			path = UI;
@@ -264,6 +267,14 @@
 				4E2DF2EA258E98750032346E /* CheckBoxTableViewCell.xib */,
 			);
 			path = CheckBoxCell;
+			sourceTree = "<group>";
+		};
+		4EC06819258FEAC00054B95D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4EC0681A258FEBF70054B95D /* CustomButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		4ED4B5A5258D7D5C003FC128 /* CollectionViews */ = {
@@ -471,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E22C6A9258D507400D19FB2 /* MealHeader.swift in Sources */,
+				4EC0681B258FEBF70054B95D /* CustomButtonView.swift in Sources */,
 				4E22C69F258D4C1900D19FB2 /* MainTableViewSource.swift in Sources */,
 				4E290CC6258E9F7E00CF3295 /* SectionModel.swift in Sources */,
 				4E22C6A5258D4F5400D19FB2 /* MealDetailModel.swift in Sources */,

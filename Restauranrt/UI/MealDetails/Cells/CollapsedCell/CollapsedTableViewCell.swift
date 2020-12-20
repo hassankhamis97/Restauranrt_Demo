@@ -10,6 +10,7 @@ import UIKit
 
 class CollapsedTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var sectionNameTextView: UILabel!
     @IBOutlet weak var arrowImageView: UIImageView!
     @IBOutlet weak var collapsedTableView: UITableView!
     override func awakeFromNib() {

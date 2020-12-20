@@ -53,6 +53,13 @@ class MainTableViewSource: NSObject, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CollapsedTableViewCell", for: indexPath) as! CollapsedTableViewCell
             cell.collapsedTableView.delegate = collapsedTableViewSource[indexPath.row - 1]
             cell.collapsedTableView.dataSource = collapsedTableViewSource[indexPath.row - 1]
+            cell.sectionNameTextView.text = sectionModel.name
+            
+            if sectionModel.collapsed {
+                cell.arrowImageView.image = UIImage(named: "chevronDown")
+            } else {
+                cell.arrowImageView.image = UIImage(named: "chevronUp")
+            }
             
             return cell
         }
@@ -88,6 +95,7 @@ extension MainTableViewSource: UITableViewDelegate {
             return
         }
         if sectionModel.collapsed {
+
             sectionModel.collapsed = false
             tableView.reloadRows(at: [indexPath], with: .bottom)
         } else {

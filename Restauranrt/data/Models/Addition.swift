@@ -12,6 +12,7 @@ class Addition {
     let id: String
     let name: String
     var checked: Bool
+    var updateChecked: (() -> Void)?
     
     init(
         id: String,

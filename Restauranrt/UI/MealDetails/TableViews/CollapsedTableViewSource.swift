@@ -22,11 +22,21 @@ class CollapsedTableViewSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let addition = data[indexPath.row]
         tableView.register(UINib(nibName: "CheckBoxTableViewCell", bundle: nil), forCellReuseIdentifier: "CheckBoxTableViewCell")
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CheckBoxTableViewCell", for: indexPath) as? CheckBoxTableViewCell else {
             return UITableViewCell()
         }
-        
+        cell.nameTextView.text = addition.name
+        cell.selectionStyle = .none
+        addition.updateChecked = {
+            addition.checked = !addition.checked
+            if addition.checked {
+                cell.checkBoxImageView.image = UIImage(named: "checkSquare")
+            } else {
+                cell.checkBoxImageView.image = UIImage(named: "square")
+            }
+        }
         return cell
     }
     
@@ -34,7 +44,8 @@ class CollapsedTableViewSource: NSObject, UITableViewDataSource {
 }
 
 extension CollapsedTableViewSource: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 100
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        data[indexPath.row].updateChecked!()
+    }
+
 }

@@ -17,28 +17,8 @@ class MealDetailsViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var sizes = [Size]()
-        sizes.append(Size(id: "1", name: "Big", checked: true, BD: "4.500BD"))
-        sizes.append(Size(id: "2", name: "Medium", checked: false, BD: "4.500BD"))
-        sizes.append(Size(id: "3", name: "Normal", checked: false, BD: "4.500BD"))
-        sizes.append(Size(id: "4", name: "Small", checked: false, BD: "4.500BD"))
-        let mealHeader = MealHeader(imageUrl: "https://www.vhv.rs/dpng/d/15-150323_transparent-seafood-pasta-png-png-download.png", rating: 3.5, name: "Pasta", quantity: 1, sizes: sizes )
+        mainTableView.contentInset = UIEdgeInsets(top: 0,left: 0,bottom: 90,right: 0)
         
-        var additions = [Addition]()
-        additions.append(Addition(id: "1", name: "Tomato", checked: false))
-        additions.append(Addition(id: "2", name: "Cheese", checked: false))
-        
-        let sectionModel = SectionModel(name: "Additions", additions: additions)
-        
-        var additions2 = [Addition]()
-        additions2.append(Addition(id: "1", name: "Tomato", checked: false))
-        additions2.append(Addition(id: "2", name: "Cheese", checked: false))
-        additions2.append(Addition(id: "3", name: "ay 7aga", checked: false))
-        let sectionModel2 = SectionModel(name: "Without", additions: additions2)
-        data.append(mealHeader)
-        data.append(sectionModel)
-        data.append(sectionModel2)
         
         mainTableViewSource = MainTableViewSource(data: data)
         // Do any additional setup after loading the view.
